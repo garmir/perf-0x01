@@ -1,0 +1,11 @@
+name: Level 2 Expansion
+on: [push]
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Level 2 expansion: Mon 22 Sep 21:33:56 BST 2025" > l2-expansion.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: level2-results
+          path: "*.txt"
